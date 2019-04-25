@@ -136,13 +136,33 @@ uint8_t matrix_key_count(void)
 
 static void  init_cols(void)
 {
-    DDRF  &= ~0b00000010;
-    PORTF |=  0b00000010;
+    DDRB  &= ~0b11111111;
+    PORTB |=  0b11111111;
+    DDRD  &= ~0b10001111;
+    PORTD |=  0b10001111;
+    DDRC  &= ~0b01000000;
+    PORTC |=  0b01000000;
+    DDRF  &= ~0b10000000;
+    PORTF |=  0b10000000;
 }
 
 static matrix_row_t read_cols(void)
 {
-    return (PINF&(1<<1) ? 0 : (1<<0) );
+    return (PINB&(1<<0) ? 0 : (1<<0) ) |
+    return (PINB&(1<<1) ? 0 : (1<<1) ) |
+    return (PINB&(1<<2) ? 0 : (1<<2) ) |
+    return (PINB&(1<<3) ? 0 : (1<<3) ) |
+    return (PINB&(1<<7) ? 0 : (1<<4) ) |
+    return (PIND&(1<<0) ? 0 : (1<<5) ) |
+    return (PIND&(1<<1) ? 0 : (1<<6) ) |
+    return (PIND&(1<<2) ? 0 : (1<<7) ) |
+    return (PIND&(1<<3) ? 0 : (1<<8) ) |
+    return (PINC&(1<<6) ? 0 : (1<<9) ) |
+    return (PINF&(1<<7) ? 0 : (1<<10) ) |
+    return (PINB&(1<<6) ? 0 : (1<<11) ) |
+    return (PINB&(1<<5) ? 0 : (1<<12) ) |
+    return (PINB&(1<<4) ? 0 : (1<<13) ) |
+    return (PIND&(1<<7) ? 0 : (1<<14) ) ;
 }
 
 static void unselect_rows(void)
