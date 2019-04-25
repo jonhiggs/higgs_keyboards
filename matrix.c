@@ -147,20 +147,32 @@ static matrix_row_t read_cols(void)
 
 static void unselect_rows(void)
 {
-    DDRB  &= ~0b00001001;
-    PORTB &= ~0b00001001;
+    DDRF  &= ~0b01110011;
+    PORTF &= ~0b01110011;
 }
 
 static void select_row(uint8_t row)
 {
     switch (row) {
         case 0:
-            DDRB  |= (1<<0);
-            PORTB &= ~(1<<0);
+            DDRF  |= (1<<0);
+            PORTF &= ~(1<<0);
             break;
         case 1:
-            DDRB  |= (1<<3);
-            PORTB &= ~(1<<3);
+            DDRF  |= (1<<1);
+            PORTF &= ~(1<<1);
+            break;
+        case 2:
+            DDRF  |= (1<<4);
+            PORTF &= ~(1<<4);
+            break;
+        case 3:
+            DDRF  |= (1<<5);
+            PORTF &= ~(1<<5);
+            break;
+        case 4:
+            DDRF  |= (1<<6);
+            PORTF &= ~(1<<6);
             break;
     }
 }
