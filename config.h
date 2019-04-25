@@ -31,8 +31,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
    TMK rows and columns are different to the Filco rows and columns due to the
    direction of the diodes in the circuit board.
 */
-#define MATRIX_ROWS 2
-#define MATRIX_COLS 1
+#define MATRIX_ROWS 5
+#define MATRIX_COLS 15
 
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
