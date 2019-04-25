@@ -149,20 +149,20 @@ static void  init_cols(void)
 static matrix_row_t read_cols(void)
 {
     return (PINB&(1<<0) ? 0 : (1<<0) ) |
-    return (PINB&(1<<1) ? 0 : (1<<1) ) |
-    return (PINB&(1<<2) ? 0 : (1<<2) ) |
-    return (PINB&(1<<3) ? 0 : (1<<3) ) |
-    return (PINB&(1<<7) ? 0 : (1<<4) ) |
-    return (PIND&(1<<0) ? 0 : (1<<5) ) |
-    return (PIND&(1<<1) ? 0 : (1<<6) ) |
-    return (PIND&(1<<2) ? 0 : (1<<7) ) |
-    return (PIND&(1<<3) ? 0 : (1<<8) ) |
-    return (PINC&(1<<6) ? 0 : (1<<9) ) |
-    return (PINF&(1<<7) ? 0 : (1<<10) ) |
-    return (PINB&(1<<6) ? 0 : (1<<11) ) |
-    return (PINB&(1<<5) ? 0 : (1<<12) ) |
-    return (PINB&(1<<4) ? 0 : (1<<13) ) |
-    return (PIND&(1<<7) ? 0 : (1<<14) ) ;
+           (PINB&(1<<1) ? 0 : (1<<1) ) |
+           (PINB&(1<<2) ? 0 : (1<<2) ) |
+           (PINB&(1<<3) ? 0 : (1<<3) ) |
+           (PINB&(1<<7) ? 0 : (1<<4) ) |
+           (PIND&(1<<0) ? 0 : (1<<5) ) |
+           (PIND&(1<<1) ? 0 : (1<<6) ) |
+           (PIND&(1<<2) ? 0 : (1<<7) ) |
+           (PIND&(1<<3) ? 0 : (1<<8) ) |
+           (PINC&(1<<6) ? 0 : (1<<9) ) |
+           (PINF&(1<<7) ? 0 : (1<<10) ) |
+           (PINB&(1<<6) ? 0 : (1<<11) ) |
+           (PINB&(1<<5) ? 0 : (1<<12) ) |
+           (PINB&(1<<4) ? 0 : (1<<13) ) |
+           (PIND&(1<<7) ? 0 : (1<<14) ) ;
 }
 
 static void unselect_rows(void)
