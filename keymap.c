@@ -32,7 +32,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 extern const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS];
 extern const uint16_t fn_actions[];
 
-#define KEYMAP(K00, K01) { { KC_##K00 }, { KC_##K01 } }
+#define KEYMAP(K00, K01) { \
+	{ KC_##K00 },          \
+    { KC_##K01 },          \
+}
 #endif
 
 #include "command.h"

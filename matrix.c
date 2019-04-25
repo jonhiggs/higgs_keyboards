@@ -142,14 +142,13 @@ static void  init_cols(void)
 
 static matrix_row_t read_cols(void)
 {
-    return (PINB&(1<<0) ? 0 : (1<<0) ) |
-           (PINB&(1<<3) ? 0 : (1<<1) ) ;
+    return (PINF&(1<<1) ? 0 : (1<<0) );
 }
 
 static void unselect_rows(void)
 {
     DDRB  &= ~0b00001001;
-    PORTB &= ~0b10001001;
+    PORTB &= ~0b00001001;
 }
 
 static void select_row(uint8_t row)
