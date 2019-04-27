@@ -21,11 +21,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0x6062
+#define PRODUCT_ID      0x6063
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    jhiggs
-#define PRODUCT         ML65
-#define DESCRIPTION     T.M.K. Hacked Filco Minila.
+#define MANUFACTURER    higgs_keyboards
+#define PRODUCT         H0001
+#define DESCRIPTION     ml65
 
 /* key matrix size
    TMK rows and columns are different to the Filco rows and columns due to the
