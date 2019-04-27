@@ -1,7 +1,8 @@
 *.eep
 *.elf
 *.lss
-*.hex
 *.sym
+*.map
 obj_ml65/
+obj_ml67/
 .dep/
