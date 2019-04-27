@@ -2,13 +2,13 @@
 TARGET = ml65
 
 # Directory common source filess exist
-TMK_DIR = ./tmk_core
+TMK_DIR = ../../tmk_core
 
 # Directory keyboard dependent files exist
 TARGET_DIR = ./build/
 
 # project specific files
-SRC = matrix.c led.c keymap.c
+SRC = keymap.c keymap_common.c matrix.c led.c
 CONFIG_H = config.h
 
 MCU = atmega32u4
