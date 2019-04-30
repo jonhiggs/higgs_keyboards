@@ -67,6 +67,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
 
+#define MOUSEKEY_ENABLE = no
+
 #define TAPPING_TERM    150
 #define TAPPING_TOGGLE  2
 
