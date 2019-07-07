@@ -81,13 +81,13 @@ OPT_DEFS += -DBOOTLOADER_SIZE=512
 #   comment out to disable the options.
 #
 #BOOTMAGIC_ENABLE = yes  # Virtual DIP switch configuration(+1000)
-MOUSEKEY_ENABLE = no    # Mouse keys(+5000)
+#MOUSEKEY_ENABLE = yes   # Mouse keys(+5000)
 EXTRAKEY_ENABLE = yes   # Audio control and System control(+600)
 CONSOLE_ENABLE = yes    # Console for debug
 COMMAND_ENABLE = yes    # Commands for debug and configuration
 SLEEP_LED_ENABLE = yes  # Breathing sleep LED during USB suspend
 NKRO_ENABLE = no        # USB Nkey Rollover(+500)
-PS2_MOUSE_ENABLE = no   # PS/2 mouse(TrackPoint) support
+#PS2_MOUSE_ENABLE = no   # PS/2 mouse(TrackPoint) support
 
 #---------------- Programming Options --------------------------
 AVRDUDE = ${ARDUINO_PATH}/Contents/Java/hardware/tools/avr/bin/avrdude
