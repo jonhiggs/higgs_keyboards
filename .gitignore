@@ -5,4 +5,5 @@
 *.map
 obj_ml65/
 obj_ml67/
+obj_ml67_unix/
 .dep/
