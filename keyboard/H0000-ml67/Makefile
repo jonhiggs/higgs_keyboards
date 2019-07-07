@@ -132,24 +132,3 @@ include $(TMK_DIR)/rules.mk
 
 plain: OPT_DEFS += -DKEYMAP_PLAIN
 plain: all
-
-git_reset:
-	git reset --hard
-	git checkout origin/master
-	git branch -D master
-	git branch master
-	git pull origin master
-
-git_update:
-	git checkout master
-	git pull origin master
-
-git_tests:
-	git checkout tests
-	git reset --hard
-	git fetch
-	git checkout origin/tests
-	git branch -D tests
-	git branch tests
-	git checkout tests
-
