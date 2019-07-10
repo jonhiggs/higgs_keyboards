@@ -10,18 +10,10 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       TAB,  Q,    W,    E,    R,    T,    Y,    U,    I,    O,    P,    LBRC, RBRC, BSPC,      \
       LCTL, A,    S,    D,    F,    G,    H,    J,    K,    L,    SCLN, QUOT,       ENT,       \
       LSFT, Z,    X,    C,    V,    B,    N,    M,    COMM, DOT,  SLSH,       RSFT, UP,   NO , \
-      F4,   FN2,  F13,  LGUI,             SPC,              RALT, FN3,  NO,   LEFT, DOWN, RGHT,\
+      F4,   FN1,  F13,  LGUI,             SPC,              RALT, FN2,  NO,   LEFT, DOWN, RGHT,\
       FN4,  FN4                                                                                \
     ),
-    KEYMAP(   // LAYER 1: OSX READLINE
-      TRNS, 1,    2,    3,    4,    5,    6,    7,    8,    9,    0,    TRNS, TRNS, TRNS, TRNS,\
-      TRNS, Q,    FN25, E,    R,    T,    FN26, FN24, I,    O,    P,    TRNS, TRNS, TRNS,      \
-      TRNS, A,    S,    FN23, FN21, G,    FN19, J,    FN27, L,    TRNS, TRNS,       TRNS,      \
-      TRNS, Z,    X,    C,    V,    FN20, N,    M,    TRNS, TRNS, TRNS,       TRNS, TRNS, TRNS,\
-      TRNS, TRNS, TRNS, TRNS,             TRNS,             TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,\
-      TRNS, TRNS                                                                               \
-    ),
-    KEYMAP(   // LAYER 2
+    KEYMAP(   // LAYER 1
       TRNS, F1,   F2,   F3,   F4,   F5,   F6,   F7,   F8,   F9,   F10,  F11,  F12,SYSREQ, NO, \
       TRNS, NO,   NO,   END,  NO,   NO,   NO,   PGUP, NO,   NO,   NO,   NO,   NO,   DEL,      \
       TRNS, HOME, NO,   PGDN, NO,   NO,   LEFT, DOWN, UP,   RGHT, NO,   NO,         NO,       \
@@ -29,7 +21,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       TRNS, TRNS, TRNS, TRNS,             SPC,              TRNS, TRNS, NO,   NO,   NO,   NO, \
       TRNS, TRNS                                                                              \
     ),
-    KEYMAP(   // LAYER 3
+    KEYMAP(   // LAYER 2
       FN15, F14,  F15,  NO,   NO,   NO,   NO,   MPRV, MPLY, MNXT, MUTE, VOLD, VOLU, NO,   EJCT, \
       TRNS, NO,   NO,   UP,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,         \
       TRNS, NO,   NO,   NO,   FN17, NO,   NO,   INS,  HOME, PGUP, BSPC, NO,         NO,         \
@@ -56,9 +48,8 @@ enum function_id {
 
 // Fn action definition
 const uint16_t PROGMEM fn_actions[] = {
-    [1] = ACTION_LAYER_TOGGLE(1),             // FN1 switch to Emacs layer
-    [2] = ACTION_LAYER_TAP_TOGGLE(2),         // FN2 switch to layer 2
-    [3] = ACTION_LAYER_MOMENTARY(3),          // FN3 switch to layer 3
+    [1] = ACTION_LAYER_TAP_TOGGLE(1),         // FN2 switch to layer 2
+    [2] = ACTION_LAYER_MOMENTARY(2),          // FN3 switch to layer 3
     [4] = ACTION_LAYER_MOMENTARY(1),          // FN1 footswitch to Emacs layer
     [13] = ACTION_FUNCTION(ESC),              // Special ESC key.
     [14] = ACTION_FUNCTION(TMUX),             // tmux bind prefix
