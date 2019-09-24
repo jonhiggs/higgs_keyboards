@@ -24,7 +24,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       TAB,  Q,    W,    E,    R,    T,    Y,    U,    I,    O,    P,    LBRC, RBRC, BSPC,      \
       LCTL, A,    S,    D,    F,    G,    H,    J,    K,    L,    SCLN, QUOT,       ENT,       \
       LSFT, Z,    X,    C,    V,    B,    N,    M,    COMM, DOT,  SLSH,       RSFT, UP,        \
-      F4,   NO,   FN1,  LGUI,             SPC,              RALT, FN2,        LEFT, DOWN, RGHT \
+      F4,   FN3,  FN1,  LGUI,             SPC,              RALT, FN2,        LEFT, DOWN, RGHT \
     ),
     KEYMAP(   // LAYER 1
       TRNS, F1,   F2,   F3,   F4,   F5,   F6,   F7,   F8,   F9,   F10,  F11,  F12,SYSREQ, NO, \
@@ -39,6 +39,13 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       TRNS, NO,   NO,   NO,   NO,   NO,   NO,   INS,  HOME, PGUP, BSPC, NO,         NO,         \
       TRNS, NO,   NO,   NO,   NO,   NO,   NO,   DEL,  END,  PGDN, NO,         TRNS, NO,         \
       TRNS, TRNS, TRNS, TRNS,             TRNS,             TRNS, TRNS,       NO,   NO,   NO    \
+    ),
+    KEYMAP(   // LAYER 3
+      FN15, F1,   F2,   F3,   F4,   F5,   F6,   F7,   F8,   F9,   F10,  F11,  F12,  VOLD,VOLU, \
+      TRNS, NO,   NO,   END,  NO,   NO,   NO,   PGUP, PSCR, NO,   NO,   NO,   NO,   DEL,       \
+      TRNS, HOME, NO,   PGDN, NO,   NO,   LEFT, DOWN, UP,   RGHT, NO,   NO,         NO,        \
+      TRNS, NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,         TRNS,MSTP,       \
+      TRNS, TRNS, TRNS, TRNS,             TRNS,             TRNS, TRNS,       MPRV,MPLY,MNXT   \
     )
 };
 
@@ -48,10 +55,10 @@ enum function_id {
     PROGRAMMING,
 };
 
-
 const uint16_t PROGMEM fn_actions[] = {
     [1] = ACTION_LAYER_MOMENTARY(1),          // Switch to layer 1
     [2] = ACTION_LAYER_MOMENTARY(2),          // Switch to layer 2
+    [3] = ACTION_LAYER_MOMENTARY(3),          // Switch to layer 3
     [13] = ACTION_FUNCTION(ESC),              // Special ESC key.
     [15] = ACTION_FUNCTION(PROGRAMMING),      // A Programing button
 };
