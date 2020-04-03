@@ -15,7 +15,17 @@ Controller: Teensy 2
 Footswitch Ports: 1
 Connector: USB Type Mini-B
 
-
 Points of note:
 
-- The back plate cannot be removed from the case.
+- The keyboard backplate cannot be removed from the case.
+
+
+![top](./images/t.jpeg)
+
+![top left](./images/tl.jpeg)
+
+![right](./images/r.jpeg)
+
+![left](./images/l.jpeg)
+
+![back](./images/b.jpeg)
