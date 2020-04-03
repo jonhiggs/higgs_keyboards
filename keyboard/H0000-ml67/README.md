@@ -1,6 +1,6 @@
 # ML67
 
-A highly modified Filco Minila.
+A highly modified Filco Minila. Recommended for us on Linux.
 
 Serial: H0000
 Date: 07/05/2015

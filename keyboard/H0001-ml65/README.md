@@ -1,6 +1,6 @@
 # ML65
 
-A highly modified Filco Minila.
+A highly modified Filco Minila. Recommended for us on MacOS.
 
 Serial: H0001
 Date: 27/04/2019
