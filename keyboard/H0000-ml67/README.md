@@ -11,6 +11,7 @@ Keyboard Angle:
 Case Material: Lego
 Key Cap Material: ABS Plastic
 Controller: Teensy 2
+Connector: USB Type B
 
 ![top](./images/t.jpeg)
 
