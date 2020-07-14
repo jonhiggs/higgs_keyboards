@@ -138,8 +138,8 @@ static void  init_cols(void)
 {
     DDRB  &= ~0b11111111;
     PORTB |=  0b11111111;
-    DDRD  &= ~0b10001111;
-    PORTD |=  0b10001111;
+    DDRD  &= ~0b10011111;
+    PORTD |=  0b10011111;
     DDRC  &= ~0b01000000;
     PORTC |=  0b01000000;
     DDRF  &= ~0b10000000;
@@ -162,13 +162,16 @@ static matrix_row_t read_cols(void)
            (PINB&(1<<3) ? 0 : (1<<11) ) |
            (PINB&(1<<2) ? 0 : (1<<12) ) |
            (PINB&(1<<1) ? 0 : (1<<13) ) |
-           (PINB&(1<<0) ? 0 : (1<<14) ) ;
+           (PINB&(1<<0) ? 0 : (1<<14) ) |
+           (PIND&(1<<4) ? 0 : (1<<15) ) ;
 }
 
 static void unselect_rows(void)
 {
     DDRF  &= ~0b01110011;
     PORTF &= ~0b01110011;
+    DDRD  &= ~0b00100000;
+    PORTD &= ~0b00100000;
 }
 
 static void select_row(uint8_t row)
@@ -193,6 +196,10 @@ static void select_row(uint8_t row)
         case 4:
             DDRF  |= (1<<6);
             PORTF &= ~(1<<6);
+            break;
+        case 5:
+            DDRD  |= (1<<5);
+            PORTD &= ~(1<<5);
             break;
     }
 }
