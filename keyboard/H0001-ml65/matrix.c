@@ -177,27 +177,27 @@ static void unselect_rows(void)
 static void select_row(uint8_t row)
 {
     switch (row) {
-        case 0:
+        case 0:   // (Row A)
             DDRF  |= (1<<0);
             PORTF &= ~(1<<0);
             break;
-        case 1:
+        case 1:   // (Row B)
             DDRF  |= (1<<1);
             PORTF &= ~(1<<1);
             break;
-        case 2:
+        case 2:   // (Row C)
             DDRF  |= (1<<4);
             PORTF &= ~(1<<4);
             break;
-        case 3:
+        case 3:   // (Row D)
             DDRF  |= (1<<5);
             PORTF &= ~(1<<5);
             break;
-        case 4:
+        case 4:   // (Row E)
             DDRF  |= (1<<6);
             PORTF &= ~(1<<6);
             break;
-        case 5:
+        case 5:   // (Row F)
             DDRD  |= (1<<5);
             PORTD &= ~(1<<5);
             break;
