@@ -19,6 +19,7 @@ Changes:
 - Introduce F-Keys
 - Introduce physical Page Up/Down keys.
 - Moved the Z,X,C row 0.25u to the right.
+- [MPT](https://matt3o.com/about-mt3-profile-and-devtty-set/) profile keycaps.
 
 Compromises
 - Vim layout arrows rather than normal.
