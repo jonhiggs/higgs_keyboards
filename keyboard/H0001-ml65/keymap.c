@@ -23,13 +23,13 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       FN13, 1,    2,    3,    4,    5,    6,    7,    8,    9,    0,    MINS, EQL,  BSLS, GRV, \
       TAB,  Q,    W,    E,    R,    T,    Y,    U,    I,    O,    P,    LBRC, RBRC, BSPC,      \
       LCTL, A,    S,    D,    F,    G,    H,    J,    K,    L,    SCLN, QUOT,       ENT,       \
-      LSFT, Z,    X,    C,    V,    B,    N,    M,    COMM, DOT,  SLSH,       RSFT, NO,        \
+      LSFT, Z,    X,    C,    V,    B,    N,    M,    COMM, DOT,  SLSH,       RSFT, F13,       \
       F4,   NO,   FN1,  LGUI,             SPC,              RALT, FN1,          NO,VOLD,VOLU,  \
       FN1 \
     ),
     KEYMAP(   // LAYER 1
       FN15, F1,   F2,   F3,   F4,   F5,   F6,   F7,   F8,   F9,   F10,  F11,  F12,  VOLD,VOLU, \
-      TRNS, NO,   NO,   END,  NO,   NO,   NO,   PGUP, PSCR, NO,   F13,  F14,  F15,  DEL,       \
+      TRNS, NO,   NO,   END,  NO,   NO,   NO,   PGUP, PSCR, NO,   NO,   NO,    NO,  DEL,       \
       TRNS, HOME, NO,   PGDN, NO,   NO,   LEFT, DOWN, UP,   RGHT, NO,   NO,         NO,        \
       TRNS, NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,         TRNS, NO,        \
       TRNS, NO,   TRNS, TRNS,             TRNS,             TRNS, TRNS,         NO, NO, F16,   \
